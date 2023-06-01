@@ -8,7 +8,8 @@ btn.addEventListener("click",fnc);
 
 function fnc(){
     const email_input = document.querySelector('.email_input');
-    const email = email_input.value;;
+    const email = email_input.value;
+    const ce = document.querySelector('.confirm_email');
     var regx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     var isValid = regx.test(email);
@@ -20,5 +21,6 @@ function fnc(){
     else{
         supreme.style.display = 'none';
         supreme1.style.display = 'block';
+        ce.textContent = email;
     }
 }
